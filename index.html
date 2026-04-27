@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Daily Life App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            text-align: center;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #007bff;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Flow Daily Life App</h1>
+</header>
+
+<nav>
+    <a href="#schedule">Schedule</a>
+    <a href="#nutrition">Nutrition</a>
+    <a href="#workout">Workout Tracking</a>
+</nav>
+
+<section id="schedule">
+    <h2>Schedule Tracker</h2>
+    <input type="text" id="scheduleInput" placeholder="Add your schedule">
+    <button onclick="addSchedule()">Add</button>
+    <ul id="scheduleList"></ul>
+</section>
+
+<section id="nutrition">
+    <h2>Nutrition Tracker</h2>
+    <input type="text" id="nutritionInput" placeholder="Add your meal">
+    <button onclick="addNutrition()">Add</button>
+    <ul id="nutritionList"></ul>
+</section>
+
+<section id="workout">
+    <h2>Workout Tracker</h2>
+    <input type="text" id="workoutInput" placeholder="Add your workout">
+    <button onclick="addWorkout()">Add</button>
+    <ul id="workoutList"></ul>
+</section>
+
+<script>
+    function addSchedule() {
+        const input = document.getElementById('scheduleInput');
+        const li = document.createElement('li');
+        li.textContent = input.value;
+        document.getElementById('scheduleList').appendChild(li);
+        input.value = '';
+    }
+
+    function addNutrition() {
+        const input = document.getElementById('nutritionInput');
+        const li = document.createElement('li');
+        li.textContent = input.value;
+        document.getElementById('nutritionList').appendChild(li);
+        input.value = '';
+    }
+
+    function addWorkout() {
+        const input = document.getElementById('workoutInput');
+        const li = document.createElement('li');
+        li.textContent = input.value;
+        document.getElementById('workoutList').appendChild(li);
+        input.value = '';
+    }
+</script>
+
+</body>
+</html>
